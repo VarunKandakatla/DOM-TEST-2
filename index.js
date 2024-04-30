@@ -5,7 +5,8 @@ async function Add()
     let sol = await fetch('https://dom-test-1.vercel.app/add2?a='+num1+'&b='+num2,{
         method : "POST",
         headers :{
-            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         }
     });
     sol = await sol.json();
